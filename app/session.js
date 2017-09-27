@@ -1,7 +1,7 @@
 const {EventEmitter} = require('events');
 const {StringDecoder} = require('string_decoder');
 
-const {app} = require('electron');
+// const {app} = require('electron');
 const defaultShell = require('default-shell');
 
 const {getDecoratedEnv} = require('./plugins');
@@ -29,7 +29,7 @@ module.exports = class Session extends EventEmitter {
       {},
       process.env,
       {
-        LANG: app.getLocale().replace('-', '_') + '.UTF-8',
+        // LANG: app.getLocale().replace('-', '_') + '.UTF-8',
         TERM: 'xterm-256color',
         TERM_PROGRAM: productName,
         TERM_PROGRAM_VERSION: version
